@@ -1,0 +1,146 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --gray-blue: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: var(--light-gray);
+}
+main {
+  border-radius: 8px;
+  box-shadow: 0 0 25px hsla(218, 22%, 67%, 0.25);
+  margin: 4.5rem 2rem;
+  overflow: hidden;
+}
+section {
+  padding: 1rem 1.6rem;
+
+}
+.about {
+  background-color: white;
+}
+h1 {
+  color: var(--cyan);
+  font-size: 1.2rem;
+  margin-bottom: 1.3em;
+}
+h2.yellow {
+  font-size: 0.9rem;
+  line-height: 1.5em;
+}
+.subs h2, .why h2 {
+  font-size: 1rem;
+  line-height: 1em;
+  letter-spacing: 0.7px;
+}
+.yellow {
+  color: var(--bright-yellow);
+}
+.about p {
+  color: var(--gray-blue);
+  font-size: 0.83rem;
+  line-height: 2em;
+}
+.subs {
+  background-color: var(--cyan);
+  color: white;
+}
+.price {
+  font-size: 2rem;
+  line-height: 1em;
+  margin: 0.8em 0 0;
+}
+.price sup {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--light-gray);
+  opacity: 0.8;
+}
+.subs p {
+  font-size: 0.95rem;
+  margin: 0.5em 0 1em;
+}
+button {
+  text-align: center;
+  background-color: var(--bright-yellow);
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 2px 0 25px hsla(0, 0%, 0%, 0.05);
+  border: 0;
+  padding: 15px 0;
+  color: white;
+  font-weight: 700;
+  margin: 1em 0 0.5em;
+
+}
+.why {
+  background-color: hsla(179, 62%, 43%, 0.8);
+  color: white;
+}
+.why ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  color: var(--light-gray);
+  font-size: 0.85rem;
+  line-height: 1.5em;
+  margin-block-start: 1.2em;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: var(--cyan); }
+
+@media only screen and (min-width: 768px) {
+
+  footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .about {
+    grid-area: about;
+  }
+  .subs {
+    grid-area: subs;
+  }
+  .why {
+    grid-area: why;
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "about about"
+    "subs why";
+    max-width: 636px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  section {
+    padding: 1.75rem 2.5rem;
+  }
+  h1 {
+    color: var(--cyan);
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+  }
+  h2.yellow {
+    font-size: 1.1rem;
+    line-height: 1em;
+  }
+  .about p {
+    color: var(--gray-blue);
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+}
